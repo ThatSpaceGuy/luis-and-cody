@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<meta charset="utf-8" />
+		<title>Luis and Cody</title>
+		<script src="https://cdn.auth0.com/js/lock-8.1.min.js"></script>
+		<script src="vendors/angular/angular.min.js"></script>
+		<script src="client.js"></script>
+	</head>
+	<body ng-app="myApp">
+
+		<main ng-controller="authCont">
+		<h2><span ng-hide="userIsLoggedIn">Join t</span><span ng-show="userIsLoggedIn">T</span>he adventure of Luis and Cody!</h2>
+		<div ng-hide="userIsLoggedIn">
+				<button ng-click="login()">Join Now or forever hold your pieces of pie.</button>
+			</div>
+
+		<div ng-show="userIsLoggedIn">You, {{ userProfile.name }} are a winnner! Winner! Winner chicken dinner!
+			<button ng-click="logout()">Get outa here!</button>
+		</div>
+
+		</main>
+		
+	</body>
+</html>
